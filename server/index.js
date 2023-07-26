@@ -1,3 +1,5 @@
+
+var cors = require('cors')
 //Package imports
 console.log('Hello World');
 const express = require('express');
@@ -10,6 +12,14 @@ const authRouter = require('./routes/auth')
 const PORT = process.env.PORT || 3000;
 const app = express();
 const DB = "mongodb+srv://komaldhall1:48komal48@cluster0.ju5kpdh.mongodb.net/?retryWrites=true&w=majority";
+
+
+app.use(cors({
+    origin: '*',
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    preflightContinue: false,
+    optionsSuccessStatus: 204
+}))
 
 //middleware
 app.use(express.json());
