@@ -15,10 +15,7 @@ const DB = "mongodb+srv://komaldhall1:48komal48@cluster0.ju5kpdh.mongodb.net/?re
 
 
 app.use(cors({
-    origin: '*',
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    preflightContinue: false,
-    optionsSuccessStatus: 204
+    origin: '*'
 }))
 
 //middleware
